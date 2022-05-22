@@ -17,7 +17,7 @@ public class AddressBook {
         boolean status = true;
         do {
 
-            System.out.println("Enter the number according to to requirement");
+            System.out.println("Enter the number according to to requirment");
             System.out.println("Enter 1 to Add");
             System.out.println("Enter 2 to Edit");
             System.out.println("Enter 3 to Delete");
@@ -32,7 +32,7 @@ public class AddressBook {
                     delete();
                     break;
                 default:
-                    status =false;
+                    status = false;
             }
         } while (status);
     }
@@ -145,6 +145,10 @@ public class AddressBook {
         System.out.println(total);
     }
 
+    public void sortByZip() {
+        Collections.sort(list, Sort.compareZip);
+    }
+
     public void sortByFirstName() {
         Collections.sort(list, Sort.compareFirstName);
     }
@@ -163,5 +167,6 @@ public class AddressBook {
                 "list=" + list +
                 '}';
     }
+
 }
 
