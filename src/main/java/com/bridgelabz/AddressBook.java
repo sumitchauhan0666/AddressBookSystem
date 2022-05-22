@@ -1,4 +1,5 @@
 package com.bridgelabz;
+
 import java.util.*;
 
 public class AddressBook {
@@ -17,7 +18,7 @@ public class AddressBook {
         boolean status = true;
         do {
 
-            System.out.println("Enter the number according to to requirement");
+            System.out.println("Enter the number according to to requirment");
             System.out.println("Enter 1 to Add");
             System.out.println("Enter 2 to Edit");
             System.out.println("Enter 3 to Delete");
@@ -32,7 +33,7 @@ public class AddressBook {
                     delete();
                     break;
                 default:
-                    status = false;
+                    status =false;
             }
         } while (status);
     }
@@ -140,6 +141,12 @@ public class AddressBook {
         }
     }
 
+    public void countList() {
+        Long total;
+        total = list.stream().count();
+        System.out.println(total);
+    }
+
     public void sortCity() {
         Collections.sort(list, Sort.compareCity);
     }
@@ -147,7 +154,6 @@ public class AddressBook {
     public void sortState() {
         Collections.sort(list, Sort.compareState);
     }
-
 
     @Override
     public String toString() {
