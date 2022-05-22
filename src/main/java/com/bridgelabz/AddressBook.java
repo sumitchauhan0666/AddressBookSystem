@@ -1,9 +1,7 @@
 package com.bridgelabz;
-
 import java.util.*;
 
-public class AddressBook
-{
+public class AddressBook {
     public List<Contacts> list = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
 
@@ -19,7 +17,7 @@ public class AddressBook
         boolean status = true;
         do {
 
-            System.out.println("Enter the number according to to requirment");
+            System.out.println("Enter the number according to to requirement");
             System.out.println("Enter 1 to Add");
             System.out.println("Enter 2 to Edit");
             System.out.println("Enter 3 to Delete");
@@ -34,7 +32,7 @@ public class AddressBook
                     delete();
                     break;
                 default:
-                    status =false;
+                    status = false;
             }
         } while (status);
     }
@@ -140,9 +138,16 @@ public class AddressBook
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-    } public void sortCity() {
-    Collections.sort(list, Sort.compareCity);
-}
+    }
+
+    public void sortCity() {
+        Collections.sort(list, Sort.compareCity);
+    }
+
+    public void sortState() {
+        Collections.sort(list, Sort.compareState);
+    }
+
 
     @Override
     public String toString() {
@@ -151,4 +156,3 @@ public class AddressBook
                 '}';
     }
 }
-

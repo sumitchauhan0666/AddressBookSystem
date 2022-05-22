@@ -40,7 +40,6 @@ public class Contacts
     public void setCity(String city) {
         this.city = city;
     }
-
     public String getState() {
         return state;
     }
@@ -76,7 +75,8 @@ public class Contacts
 
     }
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Contacts{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
