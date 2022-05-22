@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 public class Contacts
 {
     private String firstName;
@@ -89,4 +88,5 @@ public class Contacts
                 ", email='" + email + '\'' +
                 '}';
     }
+
 }
